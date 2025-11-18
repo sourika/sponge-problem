@@ -1,7 +1,23 @@
 def sponge_case(sentence):
-    # Write your solution here!
-    pass
+    lst_words = sentence.split()
+    new_lst = []
 
+    for word in lst_words:
+        new_lst.append(convert(word))
+
+    return " ".join(new_lst)    
+
+
+def convert(word):
+    converted_lst =[]
+
+    for i in range(len(word)):
+        if i % 2 == 0:
+            converted_lst.append(word[i].lower())
+        else:
+            converted_lst.append(word[i].upper())
+    
+    return "".join(converted_lst)            
 
 
 # Test cases
